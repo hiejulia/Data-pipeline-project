@@ -23,13 +23,17 @@ public class StockAverageMapper extends Mapper<LongWritable, Text, Text, DoubleW
 
         //Extract the stock quote and convert it into a number
         String quoteStr = tokens[1];
+        String quoteStr1 = tokens[2];
         double quoteVal = Double.parseDouble(quoteStr);
+        double quoteVal1 = Double.parseDouble(quoteStr1);
 
         //Set the key
         word.set(year);
 
         //Set the value
-        quote.set(quoteVal);
+//        quote.set(quoteVal);
+        quote.set(quoteVal1);
+
 
         context.write(word, quote);
 

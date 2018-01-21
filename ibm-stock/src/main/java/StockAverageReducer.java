@@ -14,7 +14,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 public class StockAverageReducer extends Reducer<Text, DoubleWritable, Text, DoubleWritable> {
     // reduce function
     public void reduce(Text key, Iterable<DoubleWritable> values, Context context)throws IOException, InterruptedException {
-        double average = 0 ;
+//        double average = 0 ;
         double total = 0;
 
         int count = 0;
@@ -24,8 +24,8 @@ public class StockAverageReducer extends Reducer<Text, DoubleWritable, Text, Dou
             System.out.print("Reducer "+key+" "+ total);
             count ++;
         }
-        average = total/count;
-        context.write(key,new DoubleWritable(average));
+//        average = total/count;
+        context.write(key,new DoubleWritable(total));
 
 
     }
