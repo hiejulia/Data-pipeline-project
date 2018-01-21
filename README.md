@@ -19,7 +19,10 @@
 
 + Hadoop command: 
     + `hadoop fs -ls`
-    + 
+    + `hadoop s -mkdir /hbp`
+    + Upload a file in HDFS `hadoop fs -put <localsrc> ... <HDFS_dest_Path>`
+    + go to : `http://localhost:50070/explorer.html#/hbp/ibm-stock`
+    
 
 
 
