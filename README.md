@@ -32,3 +32,19 @@
 
 
 
+
+2. Customer Analysis 
++ Collect data 
+    + Customer master data : MySQL
+    + Logs : text file
+    + Twitter feeds : JSON
++ Load data from data sources in HDFS 
++ Mug data 
++ Create table in Hive to store data in format
++ Query and join tables 
++ Export data 
+
++ Set up stack: 
+    + Hortonwork data platform HDP
+    + Install HDP sandbox: 
+
