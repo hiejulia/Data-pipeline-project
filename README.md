@@ -53,4 +53,16 @@
 + Set up stack: 
     + Hortonwork data platform HDP
     + Install HDP sandbox: 
+        + HDP 2.3 
+        + HDP : hive, squoop ,
+
+
+
+3. Fraud Detection system 
++ Clean dataset 
++ Create model 
++ Using: Spark and Hadoop 
++ Problem: predict payment transaction is suspect 
++ Build model : 
+    + Find relevant field: 
 
