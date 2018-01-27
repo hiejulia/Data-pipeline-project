@@ -31,9 +31,19 @@
 + Scoring process 
 5. Run the model using MapReduce on Hadoop for scoring
 + Run the model on Hadoop 
-+ MapReduce job 
++ MapReduce job  
 
 
 #### Run the project on Hadoop with MapReduce 
 + `mvn package`
++ Start hadoop service `/usr/local/Cellar/hadoop/2.8.2/sbin/start-all.sh`
++ `hadoop jar marketing-analysis-1.0-SNAPSHOT.jar ResponsePrediction /marketing-analysis/data/inputdata.csv /marketing-analysis/output`
 
+
+#### Screenshots project 
+<img src="./img/1.png">
+<img src="./img/2.png">
+<img src="./img/3.png">
+<img src="./img/4.png">
+<img src="./img/5.png">
+<img src="./img/6.png">

@@ -33,9 +33,10 @@ public class ResponsePrediction {
 
     }
 
-    
+
     /***
      REDUCER CLASS
+     @extends MapReduceBase
      */
     public static class Reduce extends MapReduceBase implements Reducer<Text, Text, Text, IntWritable> {
         private long numRecords = 0;
@@ -53,22 +54,23 @@ public class ResponsePrediction {
                 reporter.setStatus("Finished processing " + numRecords + " lines " + "to the output directory.");
             }
         }
+
     }
 
     public static void main(String[] args) throws Exception {
         JobConf conf = new JobConf(ResponsePrediction.class);
-        conf.setJobName("responseprediction");
+        conf.setJobName("responseprediction");// set job name
         conf.setOutputKeyClass(Text.class);
         conf.setOutputValueClass(IntWritable.class);
         conf.setMapOutputKeyClass(Text.class);
         conf.setMapOutputValueClass(Text.class);
-        conf.setMapperClass(Map.class);
-        conf.setReducerClass(Reduce.class);
-        conf.setInputFormat(TextInputFormat.class);
-        conf.setOutputFormat(TextOutputFormat.class);
-        FileInputFormat.setInputPaths(conf, new Path(args[0]));
-        FileOutputFormat.setOutputPath(conf, new Path(args[1]));
-        JobClient.runJob(conf);
+        conf.setMapperClass(Map.class);// set mapper class
+        conf.setReducerClass(Reduce.class);// set reducer class
+        conf.setInputFormat(TextInputFormat.class);// set input format
+        conf.setOutputFormat(TextOutputFormat.class);// set output format
+        FileInputFormat.setInputPaths(conf, new Path("file:///Users/hien/Desktop/hadoop-projects/marketing-analysis/data/inputdata.csv"));// set input paths
+        FileOutputFormat.setOutputPath(conf, new Path("file:///Users/hien/Desktop/hadoop-projects/marketing-analysis/output"));// set output path
+        JobClient.runJob(conf);// run job
     }
 
     public static String response(String[] data) {
@@ -78,8 +80,10 @@ public class ResponsePrediction {
         inputData.put("age", (data[1] == null) ? null : new Double(parseLocale(data[1]).doubleValue()));
         inputData.put("income", (data[2] == null) ? null : new Double(parseLocale(data[2]).doubleValue()));
         inputData.put("gender", data[3]);
+
         inputData.put("folder", (data[4] == null) ? null : new Double(parseLocale(data[3]).doubleValue()));
-        String response = predictResponse(inputData);
+
+        String response = predictResponse(inputData);// call predictResponse with input data
         return response;
     }
 
@@ -93,7 +97,7 @@ public class ResponsePrediction {
         return null;
 
     }
-
+    // predictResponse (inputData)
     public static String predictResponse(HashMap<String, Object> inputData) {
 
         Double age = (Double) inputData.get("age");

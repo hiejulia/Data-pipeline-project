@@ -1,0 +1,4 @@
+ResponsePrediction.class
+ResponsePrediction$Map.class
+ResponsePrediction$Reduce.class
+ResponsePrediction$Map$Counters.class
