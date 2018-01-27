@@ -26,4 +26,14 @@
 + Model summary report 
 <img src="./img/4.png">
 4. Download classification model 
++ Make selection of data from database 
++ Use the classification model to predict 
++ Scoring process 
 5. Run the model using MapReduce on Hadoop for scoring
++ Run the model on Hadoop 
++ MapReduce job 
+
+
+#### Run the project on Hadoop with MapReduce 
++ `mvn package`
+
