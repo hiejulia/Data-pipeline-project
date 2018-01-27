@@ -17,8 +17,13 @@
 + BigML: web-based tool, data processing is done in the cloud 
 
 #### Model building steps 
-1. Upload data file 
+1. Upload data file : responsedata.csv 
 2. Create dataset with data file 
++ See the summary chart of it 
 3. Build classification model 
++ Browse decision tree created by BigML 
++ As shown from Prediction path: Age and Income is the 2 most important factor 
++ Model summary report 
+<img src="./img/4.png">
 4. Download classification model 
 5. Run the model using MapReduce on Hadoop for scoring
