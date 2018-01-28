@@ -14,7 +14,8 @@
 ### Solution  
 + Build model to take customer churn as input to predict the future churners 
 + Bayes' theorem 
-
++ Run bayes algo in prompt with Node.js 
+<img src="./img/1.png">
 
 
 
