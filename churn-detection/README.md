@@ -29,6 +29,9 @@
 
 
 
+### Run the project 
++ Create dir : `hadoop fs -ls /churn-detection `
++ Create /in and /out 
 
 
 #### Datasets 
