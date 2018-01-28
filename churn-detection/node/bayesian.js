@@ -1,4 +1,5 @@
 var prompt = require('prompt');
+// input data 
 var data = [
   ['gold', 'heavy', 'young', false],
   ['gold', 'medium', 'old', false],
@@ -40,7 +41,7 @@ var falseMedium = 0;
 var falseYoung = 0;
 var falseMiddle = 0;
 var falseOld = 0;
-
+// calculate
 for (i = 0; i < data.length; i++) {
   if (data[i][3] === true) {
     trueTot++;
@@ -65,10 +66,7 @@ for (i = 0; i < data.length; i++) {
   }
 }
 
-console.log('Calculating the frequencies and probabilities');
-
-console.log('Total true=' + trueTot + ' Total false=' + falseTot);
-
+// calculating probability        
 var Ptrue = trueTot / total;
 var Pfalse = falseTot / total;
 

@@ -19,6 +19,13 @@
 
 
 
+### Building churn predictor using Hadoop 
++ Synthetic dataset for testing 
+    + `http://www.generatedata.com/`
+    + `http://chancejs.com/`
+    + `https://github.com/nodeca/charlatan`
+    + `https://github.com/weaver/moniker`
++ Prepare a synthetic historical churn dataset 
 
 
 
