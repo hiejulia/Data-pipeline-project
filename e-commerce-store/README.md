@@ -23,3 +23,21 @@ handling missing data
     + Convert data to a proper format : 
 
 ### Spark SQL : spark module for structured data processing 
++ SQL queries 
++ Building SparkConf and context 
++ Dataframe and datasets 
+    + Dataframe : JSON, CSV, Hive table 
++ Load and parse data 
+    + Spark API
+    + Load data from sources to a table 
+    + Register dataframe as a temporary view 
++ Analyzing data - the Spark SQL way 
+    + Filter on data 
+    + Select data 
+        + Fetch 
+        + Collect all data and print it 
+        + Total count from the datasets 
+        + Spark SQL 
+        + Apriori algo : 
+            + Item frequency 
+            + Support 

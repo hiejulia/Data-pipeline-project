@@ -1,0 +1,32 @@
+{
+    "books": [
+        {
+            "title": "Data Structures with Java",
+            "authors": [
+                "John R. Hubbard",
+                "Anita Huray"
+            ],
+            "publisher": "Prentice Hall",
+            "year": 2004,
+            "isbn": "0-13-093374-0"
+        },
+        {
+            "title": "The Java Programming Language",
+            "edition": 4,
+            "authors": [
+                "Ken Arnold",
+                "James Gosling",
+                "David Holmes"
+            ],
+            "publisher": "Addison Wesley",
+            "year": 2006,
+            "isbn": "0-321-34980-6"
+        },
+        {
+            "title": "Data Analysis with Java",
+            "author": "John R. Hubbard",
+            "publisher": "Packt",
+            "year": 2017
+        }
+    ]
+}

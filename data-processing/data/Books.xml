@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <title>The Java Programming Language</title>
+        <edition>4</edition>
+        <author>Ken Arnold</author>
+        <author>James Gosling</author>
+        <author>David Holmes</author>
+        <publisher>Addison Wesley</publisher>
+        <year>2006</year>
+        <isbn>0-321-34980-6</isbn>
+    </book>
+    <book>
+        <title>Data Structures with Java</title>
+        <author>John R. Hubbard</author>
+        <author>JAnita Huray</author>
+        <publisher>Prentice Hall</publisher>
+        <year>2004</year>
+        <isbn>0-313-093374-0</isbn>
+    </book>
+    <book>
+        <title>Data Structures with Java</title>
+        <author>John R. Hubbard</author>
+        <publisher>Packt</publisher>
+        <year>2017</year>
+    </book>
+</books>
