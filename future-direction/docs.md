@@ -23,3 +23,8 @@
     + AS : engine for data analytics 
         + Loads data from disk based database into RAM for processsing 
     + AI : building OLTP solution 
+        + AI as Hadoopaccelerator 
+        + Compatible with HDFS 
+        + in mem database - high performance distributed database management - distributed computing system - data stream processing system - run a cluster of nodes - 
+        + provides full ACID support for transactions which make it an attractive choice for building OLTP system 
+        + distributed computing pattern : map reduce, fork join, parallel computations on a cluster of computer 
