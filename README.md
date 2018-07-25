@@ -66,3 +66,19 @@
 + Build model : 
     + Find relevant field: 
 
+
+
+
+
+
+
+
+
+# Apache Spark 2
++ Spark ecosystem : 
+    + Spark core 
+    + Spark streaming
+    + Spark SQL 
+    + MLlib
+    + GraphX 
+    + Spark-R
