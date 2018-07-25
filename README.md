@@ -82,3 +82,28 @@
     + MLlib
     + GraphX 
     + Spark-R
+
++ Apache Spark component: 
+    + 
+
++ navigate to : `localhost:4040`
++ run spark-shell : `$SPARK_HOME/bin/spark-shell`
+
++ Word count 
+    + Create pairRDD : `valpairRDD=stringRdd.map( s => (s,1))`
+    + Run reducebykey to count the occurency of each word : `alwordCountRDD=pairRDD.reduceByKey((x,y) =>x+y)`
+    + Run the collect to see the result : `valwordCountList=wordCountRDD.collect`
+
++ Find the sum of integers 
+    + Create RDD of even number from integers : `valintRDD = sc.parallelize(Array(1,4,5,6,7,10,15))`
+    + Filter even numbers from RDD : `valevenNumbersRDD=intRDD.filter(i => (i%2==0))`
+    + Sum the even numbers from RDD : `val sum =evenNumbersRDD.sum`
+
++ Count the number of words in file : 
+    + Read txt file : `cat people.txt`
+    + Read file from Apache Spark shell : `val file=sc.textFile("/usr/local/spark/examples/src/main/resources/people.txt")`
+    + Flaten the file, prcess and split , with each word : `valflattenFile = file.flatMap(s =>s.split(", "))`
+    + Check the content of RDD : `flattenFile.collect`
+    + Count all words from RDD : `val count = flattenFile.count`
+
+
