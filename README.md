@@ -107,3 +107,16 @@
     + Count all words from RDD : `val count = flattenFile.count`
 
 
+
+
++ Working with Data and Storage 
+    + 
+
+
+
+
+
+
+
+Chua hoc
++ 4 (RDD transformation),
