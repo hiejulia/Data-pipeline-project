@@ -1,0 +1,1 @@
+hadoop fs -cat /sensor/sensor-data
