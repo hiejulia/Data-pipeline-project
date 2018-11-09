@@ -36,3 +36,18 @@
 + Search : HDFS storage with pdf format, text format, index text format, solr, 
 + NoSQL: Cassandra, HBase  
 + Machine learning lib : Clustering computing framework, SparkML, Apache Spark ships Apache Mahout,
+
+
+
+
+
+
+### Apache Flink versus Spark 
++ Spark streaming : stream-batching operations - micro batching - credit card fraud detection 
++ Flink : fraud detection 
+
+### Real time data streaming frameworks 
++ Kafka stream API 
+    + stateless processing - filter and mapping 
+    + kubernetes container - 
+    + spark streaming : 
