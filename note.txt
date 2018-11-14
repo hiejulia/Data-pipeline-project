@@ -1,3 +1,4 @@
 Book 
 	+ Hadoop blueprints (dang lam)
-		+ 
+		+ done : 6 
+		+ add vao project portfolio 
