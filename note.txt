@@ -5,3 +5,45 @@ Book
 		+ dang lam : 3 - fraud detection - dang check source code - chua hoan thah xong 
 
 		+ dang lam : 
+
+		- check lai sach nay 
+
+
+
+		i dont really give a shit - the thoi 
+
+
+	+ Hadoop real world solutions cookbook 
+		+ done : 
+		+ dag lam : 
+
+
+	+ Hadoop and spark performance for the enterprise
+		+ ddone : 
+		+ dang lam : 
+
+
+
+
+
+
+
+	+ Practical Hadoop ecosystem 
+		+ done : 
+	 	+ dang lam 
+
+	+ Big data analytics with Spark 
+
+
+
+	+ Data lake for enterprise 
+		+ done 
+		+ dang lam : 
+
+
+
+
+	+ Practical big data analytics 
+		+ done : 
+		+ dang lam 
+
