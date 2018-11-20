@@ -1,10 +1,3 @@
-FSDataOutputStream out=fs.create(outFile,true);
-
-
-String msg=”Test to create a file on HDFS”;
-out.writeUTF(msg);
-Close FSDataOutputStream using the close() method.
-out.close();
 As another example, read from an input file and write the file to the HDFS.
 byte[] buffer = new byte[BUFFER_SIZE];
 Path inFile = new Path("input.txt");
@@ -24,7 +17,15 @@ In addition to the create(Path) method, the FileSystem class provides several ot
 An example application to read and write to the HDFS is as follows.
     import java.io.IOException;
 
-// no nhin con be nay lien tuc - the thoi - no ngoi cai kieu 
+
+
+
+mat no hien lanh - read from an input file - write the file to the HFS database 
+
+
+
+
+
 
 
 
