@@ -2,4 +2,6 @@ Book
 	+ Hadoop blueprints (dang lam)
 		+ done : 6 
 		+ add vao project portfolio 
-		+ dang lam : 3 
+		+ dang lam : 3 - fraud detection - dang check source code - chua hoan thah xong 
+
+		+ dang lam : 
