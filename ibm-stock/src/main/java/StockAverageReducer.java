@@ -28,6 +28,17 @@ public class StockAverageReducer extends Reducer<Text, DoubleWritable, Text, Dou
         context.write(key,new DoubleWritable(total));
 
 
+        // avg = 0 
+        // set int count = 0 
+        // for value value : values 
+
+        // avg += value.get 
+        // save data 
+        // context.write 
+
+
     }
 
 }
+
+

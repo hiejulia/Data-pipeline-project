@@ -4,7 +4,7 @@ Book
 		+ add vao project portfolio 
 		+ dang lam : 3 - fraud detection - dang check source code - chua hoan thah xong 
 
-		+ dang lam : 
+		+ dang lam : chap 1 
 
 		- check lai sach nay 
 
@@ -26,7 +26,7 @@ Book
 
 
 
-	+ Apache Spark Machine Learning Blueprints - DANG CHECK 
+	+ Apache Spark Machine Learning Blueprints - chua check 
 		+ done :
 		+ dang lam : 
 
@@ -48,4 +48,17 @@ Book
 	+ Practical big data analytics 
 		+ done : 
 		+ dang lam 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
