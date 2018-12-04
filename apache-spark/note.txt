@@ -1,0 +1,33 @@
+The textFile() method can be used to read the file as follows:
+scala>val file=sc.textFile("/usr/local/spark/examples/src/main/resources/people.txt")
+file: org.apache.spark.rdd.RDD[String] = /usr/local/spark/examples/src/main/resources/people.txt MapPartitionsRDD[1] at textFile at <console>:24
+The next step is to flatten the contents of the file, that is, we will create an RDD by splitting each line with , and flatten all the words in the list, as follows:
+
+
+
+// process the file - file.flatMap - e hay ma - con be nay y chang nhu con trai 
+
+scala>valflattenFile = file.flatMap(s =>s.split(", "))
+
+
+scala>flattenFile.collect
+
+
+scala>val count = flattenFile.count
+
+scala> count
+
+
+scala>flattenFile.toDebugString
+
+
+
+
+
+
+
+
+
+
+
+
