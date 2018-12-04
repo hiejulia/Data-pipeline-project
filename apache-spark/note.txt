@@ -29,5 +29,205 @@ scala>flattenFile.toDebugString
 
 
 
+-----------------
+
+
+Representational state transfer (REST) architecture is used very often while developing web services. These days, a lot of frameworks such as Hadoop, Apache Storm, and so on, provide RESTful web services that help users to interact with or monitor the framework. Apache Spark, being in the same league, also provides REST web services that can be used to monitor the Spark applications. In this section, we will learn about the REST APIs provided by Apache Spark.
+
+The response type of Spark REST APIs is JSON, which can be used to design custom monitoring over Spark applications. The REST endpoints are mounted at /api/v1, which means that for a SparkContext with UI running https://localhost:4040, the REST endpoints will be mounted at https://localhost:4040/api/v1.
+
+It is time to explore some of the REST APIs provided by Apache Spark. For that, launch Spark shell and run any of the jobs mentioned in Spark REPL also known as CLI section:
+
+Execute the following command to list the applications executed/running in SparkContext:
+
+curl http://localhost:4040/api/v1/applications
+[ {
+  "id" : "local-1479401168077",
+  "name" : "Spark shell",
+  "attempts" : [ {
+    "startTime" : "2016-11-17T16:46:05.429GMT",
+    "endTime" : "1969-12-31T23:59:59.999GMT",
+    "lastUpdated" : "2016-11-17T16:46:05.429GMT",
+    "duration" : 0,
+    "sparkUser" : "",
+    "completed" : false,
+    "startTimeEpoch" : 1479401165429,
+    "endTimeEpoch" : -1,
+    "lastUpdatedEpoch" : 1479401165429
+  } ]
+} ]
+The REST API provided previously also accepts some request parameters, for example status=running, which provides the list of applications that have requested status:
+
+curl http://localhost:4040/api/v1/applications?status=running
+[ {
+  "id" : "local-1479401168077",
+  "name" : "Spark shell",
+  "attempts" : [ {
+    "startTime" : "2016-11-17T16:46:05.429GMT",
+    "endTime" : "1969-12-31T23:59:59.999GMT",
+    "lastUpdated" : "2016-11-17T16:46:05.429GMT",
+    "duration" : 0,
+    "sparkUser" : "",
+    "completed" : false,
+    "startTimeEpoch" : 1479401165429,
+    "endTimeEpoch" : -1,
+    "lastUpdatedEpoch" : 1479401165429
+  } ]
+} ]
+Execute the following command to list the jobs executed by the application (REST URL: http://localhost:4040/api/v1/applications/[app-id]/jobs):
+
+curl http://localhost:4040/api/v1/applications/local-1479401168077/jobs
+[ {
+  "jobId" : 1,
+  "name" : "count at <console>:28",
+  "submissionTime" : "2016-11-17T16:47:33.799GMT",
+  "completionTime" : "2016-11-17T16:47:33.827GMT",
+  "stageIds" : [ 1 ],
+  "status" : "SUCCEEDED",
+  "numTasks" : 2,
+  "numActiveTasks" : 0,
+  "numCompletedTasks" : 2,
+  "numSkippedTasks" : 0,
+  "numFailedTasks" : 0,
+  "numActiveStages" : 0,
+  "numCompletedStages" : 1,
+  "numSkippedStages" : 0,
+  "numFailedStages" : 0
+}, {
+  "jobId" : 0,
+  "name" : "collect at <console>:29",
+  "submissionTime" : "2016-11-17T16:47:26.329GMT",
+  "completionTime" : "2016-11-17T16:47:26.754GMT",
+  "stageIds" : [ 0 ],
+  "status" : "SUCCEEDED",
+  "numTasks" : 2,
+  "numActiveTasks" : 0,
+  "numCompletedTasks" : 2,
+  "numSkippedTasks" : 0,
+  "numFailedTasks" : 0,
+  "numActiveStages" : 0,
+  "numCompletedStages" : 1,
+  "numSkippedStages" : 0,
+  "numFailedStages" : 0
+} ]
+The following is the complete list of RESTful APIs provided by Apache Spark along with their usage:
+
+REST endpoint
+
+
+
+
+
+
+-------- MACHINE LEARNING WITH APACHE SPARK 
+Pipelines
+// Load - and select dataset 
+    // Dataset - Row - sql : select 
+
+Dataset<Row> formattedDF = ds.select(col("Page total
+  likes"),col("Category"),col("Post Month"),col("Post
+  Weekday"),col("Post Hour"),col("Paid"),col("Lifetime People who
+  have liked your Page and engaged with your post"),col("Total
+  Interactions")); 
+
+
+// formatDf. show - 
+formattedDF.show(); 
+
+
+
+//Split the sample into Training and Test data 
+Dataset<Row>[] data=    formattedDF.na().drop().randomSplit(new
+  double[]{0.7,0.3}); 
+// random split - 0.7 - 0.3 
+
+  // split the sample dataset into 70% training and 30% test 
+System.out.println("We have training examples count :: "+ 
+  data[0].count()+" and test examples count ::"+data[1].count()); 
+          
+
+          // no cung binh thuong thoi - tat nhien no khong can may - the thoi 
+String[] featuresCols = formattedDF.drop("Total
+  Interactions").columns(); 
+          
+//This concatenates all feature columns into a single feature 
+  vector in a new column "rawFeatures". 
+VectorAssembler vectorAssembler = new 
+  VectorAssembler().setInputCols(featuresCols).
+  setOutputCol("rawFeatures"); 
+          
+//StandardScaler scaler = new StandardScaler().setInputCol
+  ("rawFeatures").setOutputCol("features").setWithStd
+  (true).setWithMean(false); 
+
+
+      // Run linear regression -     
+LinearRegression lr = new LinearRegression().setLabelCol("Total
+   Interactions").setFeaturesCol("rawFeatures") 
+                       .setMaxIter(10) 
+                       .setRegParam(0.3) 
+                       .setElasticNetParam(0.8); 
+ 
+          
+// Chain vectorAssembler and lr in a Pipeline 
+Pipeline lrPipeline = new Pipeline().setStages(new PipelineStage[]
+   {vectorAssembler, lr}); 
+// Train model.  
+PipelineModel lrModel = lrPipeline.fit(data[0]); 
+// Make predictions. 
+Dataset<Row> lrPredictions = lrModel.transform(data[1]); 
+// Select example rows to display. 
+lrPredictions.show(20); 
+
+
+
+
+
+------------- data transformation 
+
+
+
+
+// List - as list 
+
+
+
+// array - as list - create vector - RowFactory -
+
+
+
+// RowFactory - create - 1 , 2, 3, 
+List<Row> data = Arrays.asList( 
+                     RowFactory.create(1, Vectors.dense(0.1, 0.0, 1.0, 20.0), 0.0), 
+                     RowFactory.create(2, Vectors.dense(0.2, 1.0, 13.0, 40.0), 1.0), 
+                     RowFactory.create(3, Vectors.dense(0.3, 2.0, 21.0, 1.1), 0.0) 
+                   ); 
+
+
+                   // structtyp e- schema - 
+                   StructType schema = new StructType(new StructField[]{ 
+                     new StructField("id", DataTypes.IntegerType, false, Metadata.empty()), 
+                     new StructField("rawfeatures", new VectorUDT(), false, Metadata.empty()), 
+                     new StructField("label", DataTypes.DoubleType, false, Metadata.empty()) 
+                   }); 
+ // dataset - row - df= spark - create data 
+                   Dataset<Row> df = spark.createDataFrame(data, schema); 
+ 
+                   ChiSqSelector selector = new ChiSqSelector() 
+                     .setNumTopFeatures(1) 
+                     .setFeaturesCol("rawfeatures") 
+                     .setLabelCol("label") 
+                     .setOutputCol("features"); 
+ 
+                   Dataset<Row> result = selector.fit(df).transform(df); 
+                   result.show(); 
+
+
+
+
+// vector selector - no van mac ao nay vao - the thoi - no khong biet buon - ghe that - lol - chac la the - thi ra day la kieu nguoi nhu the 
+
+
+
 
 
