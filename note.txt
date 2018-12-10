@@ -9,10 +9,6 @@ Book
 		- check lai sach nay 
 
 
-
-		i dont really give a shit - the thoi 
-
-
 	+ Hadoop real world solutions cookbook 
 		+ done : 
 		+ dag lam : 
@@ -39,8 +35,9 @@ Book
 
 
 	+ Data lake for enterprise 
-		+ done 
-		+ dang lam : 
+		+ project portfolio : 
+		+ da check chap 
+		+ chua check chap : 
 
 
 
@@ -54,7 +51,9 @@ Book
 	+ Apache Spark 2.x for Java developer 
 		+ done : 1,2,3,   6  ,10 
 		+ dang lam : 
-		+ con lai : 
+		+ con lai : 4,5,7,8,9,11 
+			+ thu 4 : 4,5,6
+			+ thu 5 : 8,9,11 
 
 
 
