@@ -1,0 +1,4 @@
+WordCount.class
+WordCount$IntSumReducer.class
+WordCount$TokenizerMapper.class
+WordCountWithTools.class
