@@ -1,4 +1,5 @@
 # hadoop-projects
+(I am maintaining this project and add more demos for Hadoop distributed mode, Hadoop deployment on cloud, etc. Please give me some stars as support.)
 
 1. IBM stock project 
 + Get IBM stock dataset 
@@ -8,9 +9,20 @@
 + Process/ Analyse result
 
 
+### Hadoop 
+
++ Hadoop streaming 
+    + process HTTP server log script 
+    + stream MapReduce job
+    + Linux shell utitlity program as Mapper and Reducer 
++ Hadoop to custom metrics 
++ 
+
+
 
 ### Hadoop set up 
 + Run single node Hadoop cluster 
+<a href="https://imgur.com/aiAxe1g"><img src="https://i.imgur.com/aiAxe1g.png" title="source: imgur.com" /></a>
 + /usr/local/Celler/hadoop
 
 + Check : https://www.slideshare.net/SunilkumarMohanty3/install-apache-hadoop-on-mac-os-sierra-76275019
@@ -24,6 +36,21 @@
     + Upload a file in HDFS `hadoop fs -put <localsrc> ... <HDFS_dest_Path>`
     + go to : `http://localhost:50070/explorer.html#/hbp/ibm-stock`
 
++ For development :https://github.com/kiwenlau/hadoop-cluster-docker
++ HDFS 
+    + DataNode - NameNode 
+    + Each server - create a dir - Store HDFS data 
+    + `http://{NAMENODE}:50070/`
+
++ Distributed mode 
+    + Set up Hadoop Yarn in distributed cluster (multiple machines)
+        + Choose master node 
+        + set up yarn resource manager+ node manager 
+        + `yarn-site.xml`
+        + Start yarn daemon : ` $HADOOP_HOME/sbin/start-yarn.sh`
+        + Start NameNode > find slave > SSH to start DataNode in remote server at start up 
+
++ Distributed providers  : HDP, Cloudera 
 
 
 ### Dataset 
@@ -38,6 +65,23 @@
 + Copy file from HDFS to local file system : `hadoop fs -get /hpb/ibm-stock/output/part-r-00000 home/Users/hien/results.csv`
 + Check `head home/Users/hien/results.csv`
 
+
+# Benchmark 
++ DFSIO
+    + `hadoop jar \
+$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-*-tests.jar \
+TestDFSIO -write -nrFiles 32 –fileSize 1000`
+
++ Terasort 
+    + ` hadoop jar \
+$HADOOP_HOME/share/Hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+teragen 10000000 tera-in`
+    + MR computation BM : `hadoop jar \
+$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+terasort tera-in tera-out`
+    + validate benchmark : `hadoop jar \
+$HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-*.jar \
+teravalidate tera-out tera-validate`
 
 2. Customer Analysis 
 + Collect data 
@@ -65,12 +109,6 @@
 + Problem: predict payment transaction is suspect 
 + Build model : 
     + Find relevant field: 
-
-
-
-
-
-
 
 
 
@@ -107,16 +145,5 @@
     + Count all words from RDD : `val count = flattenFile.count`
 
 
-
-
 + Working with Data and Storage 
     + 
-
-
-
-
-
-
-
-Chua hoc
-+ 4 (RDD transformation),
