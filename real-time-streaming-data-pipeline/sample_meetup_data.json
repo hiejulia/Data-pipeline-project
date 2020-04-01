@@ -1,0 +1,83 @@
+{
+    "venue": {
+      "venue_name": "Location TBA",
+      "lon": 5.528157,
+      "lat": 52.342258,
+      "venue_id": 22334022
+    },
+    "visibility": "public",
+    "response": "yes",
+    "guests": 0,
+    "member": {
+      "member_id": 192487425,
+      "photo": "http:\/\/photos4.meetupstatic.com\/photos\/member\/3\/d\/e\/1\/thumb_249555841.jpeg",
+      "member_name": "Stefan"
+    },
+    "rsvp_id": 1628303450,
+    "mtime": 1473159126069,
+    "event": {
+      "event_name": "AMS Explores @ Tour Open Monuments Day",
+      "event_id": "230485956",
+      "time": 1473582600000,
+      "event_url": "http:\/\/www.meetup.com\/AMS-Connected\/events\/230485956\/"
+    },
+    "group": {
+      "group_topics": [
+        {
+          "urlkey": "social",
+          "topic_name": "Social"
+        },
+        {
+          "urlkey": "adventure",
+          "topic_name": "Adventure"
+        },
+        {
+          "urlkey": "diningout",
+          "topic_name": "Dining Out"
+        },
+        {
+          "urlkey": "fun-times",
+          "topic_name": "Fun Times"
+        },
+        {
+          "urlkey": "newintown",
+          "topic_name": "New In Town"
+        },
+        {
+          "urlkey": "socialnetwork",
+          "topic_name": "Social Networking"
+        },
+        {
+          "urlkey": "expat",
+          "topic_name": "Expat"
+        },
+        {
+          "urlkey": "dinner-and-drinks",
+          "topic_name": "Dinner and Drinks"
+        },
+        {
+          "urlkey": "exploring-the-city",
+          "topic_name": "Exploring the City"
+        },
+        {
+          "urlkey": "charity-work",
+          "topic_name": "Charity Work"
+        },
+        {
+          "urlkey": "local-businesses",
+          "topic_name": "Local Businesses"
+        },
+        {
+          "urlkey": "cultural-activities",
+          "topic_name": "Cultural Activities"
+        }
+      ],
+      "group_city": "Amsterdam",
+      "group_country": "nl",
+      "group_id": 13739022,
+      "group_name": "AMS Connected - Where Expats & Amsterdam Truly Unite",
+      "group_lon": 4.89,
+      "group_urlname": "AMS-Connected",
+      "group_lat": 52.37
+    }
+  }

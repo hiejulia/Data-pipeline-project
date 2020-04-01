@@ -1,3 +1,9 @@
+---
+noteId: "a5072250740811eaa68e2756672c4eea"
+tags: []
+
+---
+
 # hadoop-projects
 (I am maintaining this project and add more demos for Hadoop distributed mode, Hadoop deployment on cloud, etc. Please give me some stars as support.)
 
@@ -122,7 +128,9 @@ teravalidate tera-out tera-validate`
     + Spark-R
 
 + Apache Spark component: 
-    + 
++ RDD 
++ SparkSQL
+
 
 + navigate to : `localhost:4040`
 + run spark-shell : `$SPARK_HOME/bin/spark-shell`
@@ -146,4 +154,18 @@ teravalidate tera-out tera-validate`
 
 
 + Working with Data and Storage 
-    + 
+
+## Run Spark in a cluster 
++ Spark manager master : Yarn, Mesos
++ Package Spark application 
+    + Local : spark-submit script - jar to local Spark cluster 
+    + Run Spark application on a Cluster : spark-submit - upload jar to linux cluser > run `spark-submit` script on the cluster 
+
+
+## Optimize and tune Apache Spark jobs 
++ Partition 
++ Caching 
++ Persist RDDs 
++ Scale up : Yarn cluster + Amazon EMR
++ Broadcast across different nodes on Apache Spark 
++ 
