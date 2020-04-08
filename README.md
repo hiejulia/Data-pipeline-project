@@ -1,29 +1,23 @@
----
-noteId: "a5072250740811eaa68e2756672c4eea"
-tags: []
-
----
-
-# hadoop-projects
+# Data pipeline projects 
 (I am maintaining this project and add more demos for Hadoop distributed mode, Hadoop deployment on cloud, etc. Please give me some stars as support.)
 
-1. IBM stock project 
-+ Get IBM stock dataset 
-+ Clean the dataset 
-+ Load dataset on the HDFS 
-+ Build MapReduce program 
-+ Process/ Analyse result
+### Architect big data applications 
+- Data input : Apache Sqoop, Apache Flume 
+
+
+
 
 
 ### Hadoop 
-
++ Tools : Pig, Hive, 
 + Hadoop streaming 
     + process HTTP server log script 
     + stream MapReduce job
     + Linux shell utitlity program as Mapper and Reducer 
 + Hadoop to custom metrics 
-+ 
 
+### Spark 
+- Architecture 
 
 
 ### Hadoop set up 
@@ -169,3 +163,22 @@ teravalidate tera-out tera-validate`
 + Scale up : Yarn cluster + Amazon EMR
 + Broadcast across different nodes on Apache Spark 
 + 
+
+
+## Test project with 
+
+1. IBM stock project 
++ Get IBM stock dataset 
++ Clean the dataset 
++ Load dataset on the HDFS 
++ Build MapReduce program 
++ Process/ Analyse result
+
+
+
+### Spark streaming HBase 
+- Run Spark, HBase with Docker 
+- Create HBase table to write to 
+- Run streaming job 
+- 
+
