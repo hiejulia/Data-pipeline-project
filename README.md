@@ -4,10 +4,6 @@
 ### Architect big data applications 
 - Data input : Apache Sqoop, Apache Flume 
 
-
-
-
-
 ### Hadoop 
 + Tools : Pig, Hive, 
 + Hadoop streaming 
@@ -18,6 +14,45 @@
 
 ### Spark 
 - Architecture 
+
+
+### Apache Storm 
+- Storm cluster mode (distributed mode)
+    - multi machine Storm cluster 
+- Zookeeper, Nimbus, and Supervisor
+- Storm client 
+
+
+##### Start Apache Storm
+- Start Zookeeper process
+    - `../zookeeper/bin/./zkServer.sh start`
+    - `../zookeeper/bin/./zkServer.sh status`
+    - `../zookeeper/bin/./zkServer.sh stop`
+- Nimbus master daemon 
+    - `./storm nimbus`
+    - `./storm supervisor`
+    - `./storm ui`
+    - `./storm logviewer`
+
+- JZMQ
+- Netty 
+- `./storm jar <path-to-topology-jar> <class-with-the-main> <arg1> … <argN>`
+
+- More configs : https://github.com/apache/storm/blob/master/conf/defaults.yaml
+
+- Topology 
+    Worker
+    Executor
+    Task
+
+- Tuning paralel in Storm 
+
+
+#### Twitter streaming with Storm 
+
+
+
+
 
 
 ### Hadoop set up 

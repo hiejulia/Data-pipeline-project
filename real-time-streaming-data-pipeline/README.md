@@ -17,8 +17,6 @@
 
 
 
-
-
 # Theory part
 + Checkpoint protocol 
     + global snapshot 
