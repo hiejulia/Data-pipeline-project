@@ -47,10 +47,55 @@
 
 - Tuning paralel in Storm 
 
+- Manage Storm 
+    - Storm administration over a cluster
+    - supervisord
+    - Supervisord installation and configuration
+    - http://supervisord.org/
+        - supervisorctl
+        - Web server
+        - http://localhost:9001/
+        - XML-RPC interface
+        - Machines
+            - For ex. 2 EC2 machine 
+
+        - Storm and Zookeeper setup
+            - Start zk in cluster mode (zoo.cfg)
+            
 
 #### Twitter streaming with Storm 
+- Implement a spout that reads from Twitter
+- Build topology components based on third-party Python libraries
+- Compute statistics and rankings over rolling time periods
+- Read custom configuration settings from topology.yaml
+- Use "tick tuples" to execute logic on a schedule
 
 
+
+
+
+
+### Structured streaming with Spark 
+- Spark SQL 
+- Source stream with defined schema
+- Stream of events 
+- query 
+- create output stream of processed events
+- dataset : public NASA-weblogs http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html. (source code & demo : processNASAWebServerLogs)
+- Batch Analytics : intermezzo 
+
+
+
+- Tech stack 
+    - Spark Notebook : https://github.com/spark-notebook/spark-notebook
+    - Spark notebok based on IPython 
+    - support spark using scala 
+    - `export NOTEBOOKS_DIR=`pwd`/notebooks`
+    - `./bin/spark-notebook`
+
+- Structured streaming API (is doing )
+    - Kafka source to consume the iot-data topic
+    - a file sink to store the data into a Parquet file
 
 
 
