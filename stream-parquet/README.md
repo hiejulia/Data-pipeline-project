@@ -27,7 +27,7 @@
 
 
 # sample ref data 
-
+<a href="https://imgur.com/NpET70l"><img src="https://i.imgur.com/NpET70l.png" title="source: imgur.com" /></a>
 
 
 # Updating Reference Datasets in a Streaming Application

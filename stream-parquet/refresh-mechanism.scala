@@ -4,6 +4,7 @@ val emptyRDD: RDD[Int] = sparkContext.emptyRDD
 
 val refreshDStream  = new ConstantInputDStream(streamingContext, emptyRDD)
 
+// Cache ref dataset 
 val refreshIntervalDStream = refreshDStream.window(Seconds(60), Seconds(60))
 refreshIntervalDStream.foreachRDD{ rdd =>
   sensorRef.unpersist(false)
