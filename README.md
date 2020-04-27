@@ -1,5 +1,5 @@
 # Data pipeline projects 
-(I am maintaining this project and add more demos for Hadoop distributed mode, Hadoop deployment on cloud, etc. Please give me some stars as support.)
+(I am maintaining this project and add more demos for Hadoop distributed mode, Hadoop deployment on cloud, Spark high performance, Spark streaming application demos, Spark distributed cluster etc. Please give me some stars as support.)
 
 ### Architect big data applications 
 - Data input : Apache Sqoop, Apache Flume 
