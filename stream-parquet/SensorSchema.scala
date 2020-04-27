@@ -34,3 +34,43 @@ import org.apache.spark.streaming.Seconds
 val streamingContext = new StreamingContext(sparkContext, Seconds(2))
 
 
+// Raw stream 
+import org.apache.spark.streaming.dstream.ConstantInputDStream
+val rawDStream  = new ConstantInputDStream(streamingContext, sensorData)
+
+
+// Define schema 
+case class SensorData(sensorId: Int, timestamp: Long, value: Double)
+
+import scala.util.Try
+// Schema stream for raw stream
+val schemaStream = rawDStream.flatMap{record =>
+  val fields = record.split(",")
+  // this Try captures exceptions related to corrupted input values
+  Try {
+    SensorData(fields(0).toInt, fields(1).toLong, fields(2).toDouble)
+  }.toOption
+}
+
+
+// Save to dataframe
+
+import org.apache.spark.sql.SaveMode.Append
+
+schemaStream.foreachRDD{rdd =>
+  val df = rdd.toDF()
+  // Write to parquet 
+  df.write.format("parquet").mode(Append).save("/tmp/iotstream.parquet")
+}
+
+// ----- Start streaming process 
+streamingContext.start()
+
+
+
+
+// timestamp of desination 
+def ts: String = ((time.milliseconds - timeOrigin)/(3600 * 1000)).toString
+df.write.mode(SaveMode.Append).format("parquet").save(s"${outputPath}-$ts")
+
+

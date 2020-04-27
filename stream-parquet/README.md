@@ -12,6 +12,7 @@
 
 - Data to stream : 10K sensors 
 
+- long-lived processes like a Spark Streaming job
 
 
 # how to run 
