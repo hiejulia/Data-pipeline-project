@@ -15,6 +15,19 @@
 - long-lived processes like a Spark Streaming job
 
 
+- Join optimization 
+
+
+
 # how to run 
 - pip3 install jep jedi pyspark virtualenv
 - https://github.com/polynote/polynote/releases
+
+
+
+
+# sample ref data 
+
+
+
+# Updating Reference Datasets in a Streaming Application

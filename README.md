@@ -97,6 +97,11 @@
     - Kafka source to consume the iot-data topic
     - a file sink to store the data into a Parquet file
 
+### Spark SQL 
+- cache data to improve performance of streaming application 
+- Spark Session concurrently with the running Spark Streaming job
+- Join optimization 
+- broadcast optimization with an outer join 
 
 
 
