@@ -267,3 +267,11 @@ teravalidate tera-out tera-validate`
 - Run streaming job 
 - 
 
+### performance tuning 
+- Limiting the Data Ingress with Fixed-Rate Throttling
+- Backpressure
+    - Tuning the Backpressure PID
+    - Custom Rate Estimator
+- Dynamic Throttling
+- Caching
+- Speculative Execution
