@@ -275,3 +275,25 @@ teravalidate tera-out tera-validate`
 - Dynamic Throttling
 - Caching
 - Speculative Execution
+
+
+### Monitor spark streaming 
+- Metrics Subsystem
+
+
+
+
+
+
+### Ref 
+- Book 
+    - Hadoop 
+    - Introduction to hadoop 
+    - Apache Spark 
+    - Streaming processing with Apache Spark 
+
+
+- Confluent docs 
+- Research paper 
+
+
