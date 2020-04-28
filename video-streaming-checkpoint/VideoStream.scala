@@ -55,3 +55,29 @@ streamingContext.start()
 // video-846, 2019-03-18 00:00:00.0, 17
 // video-996, 2019-03-18 00:00:00.0, 17
 
+
+
+
+// create a streamingContext and setup the DStream operations 
+def setupContext(
+  checkpointDir : String,
+  sparkContext: SparkContext
+  ): StreamingContext = {
+
+}
+
+
+// point to dir path of HDFS cluster that is backed by very fast hardware storage like SSD
+
+
+val checkpointDir = "/tmp/streaming"
+val streamingContext = StreamingContext.getOrCreate(
+  CheckpointDir,
+  () => setupContext(CheckpointDir, spark.sparkContext)
+)
+
+streamingContext.start()
+streamingContext.awaitTermination()
+
+
+// Checkpoint Tuning
