@@ -105,6 +105,20 @@
 
 
 
+### Checkpoint 
+
+- streaming job for video data 
+    - videoPlayed events process the timestamp embedded in the event to determine the time-based aggregation 
+
+    - `VideoPlayed(video-id, client-id, timestamp)`
+    - `DStream[VideoPlayed]`
+    - `trackVideoHits function`
+
+- `http://<host>:4040/jobs/job/?id=0`
+
+
+
+
 ### Hadoop set up 
 + Run single node Hadoop cluster 
 <a href="https://imgur.com/aiAxe1g"><img src="https://i.imgur.com/aiAxe1g.png" title="source: imgur.com" /></a>
