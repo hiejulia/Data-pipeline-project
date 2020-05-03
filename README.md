@@ -14,6 +14,14 @@
 
 ### Spark 
 - Architecture 
+### MapReduce
+
+### Distributed Stream Processing 
+
+### Stateful Stream Processing in a Distributed System 
+
+### Datasource 
+- kafka, FLume, TCP socket,etc
 
 
 ### Apache Storm 
@@ -115,6 +123,20 @@
     - `trackVideoHits function`
 
 - `http://<host>:4040/jobs/job/?id=0`
+
+### Project 
+#### Generated sequences of signals, like the measurement of a sensor or GPS signals from moving vehicles
+
+
+#### Device monitoring
+
+
+
+#### Fault detection
+
+
+
+
 
 
 
@@ -295,6 +317,7 @@ teravalidate tera-out tera-validate`
 - Metrics Subsystem
 
 
+### Sliding Windows 
 
 
 
