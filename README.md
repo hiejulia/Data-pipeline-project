@@ -14,6 +14,8 @@
 
 ### Spark 
 - Architecture 
+<a href="https://imgur.com/B11fAX6"><img src="https://i.imgur.com/B11fAX6.png" title="source: imgur.com" /></a>
+
 ### MapReduce
 
 ### Distributed Stream Processing 
