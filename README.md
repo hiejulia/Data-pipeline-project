@@ -95,6 +95,7 @@
 - create output stream of processed events
 - dataset : public NASA-weblogs http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html. (source code & demo : processNASAWebServerLogs)
 - Batch Analytics : intermezzo 
+- MICROBATCH IN STRUCTURED STREAMING
 
 
 
@@ -348,7 +349,7 @@ teravalidate tera-out tera-validate`
     - Das, Tathagata, and Yuan Zhong. “Adaptive Stream Processing Using Dynamic Batch Sizing,” 2014 ACM Symposium on Cloud Computing. http://bit.ly/2WTOuby.
     - Das, Tathagata. “Deep Dive With Spark Streaming,” Spark meetup, June 17, 2013. http://bit.ly/2Q8Xzem.
     - Chintapalli, S., D. Dagit, B. Evans, R. Farivar, T. Graves, M. Holderbaugh, Z. Liu, K. Musbaum, K. Patil, B. Peng, and P. Poulosky. “Benchmarking Streaming Computation Engines at Yahoo!” Yahoo! Engineering, December 18, 2015. http://bit.ly/2bhgMJd.
-    
+
 
 
 
