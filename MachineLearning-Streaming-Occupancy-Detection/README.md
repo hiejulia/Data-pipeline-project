@@ -13,3 +13,7 @@
  |-- CO2: double (nullable = true)
  |-- HumidityRatio: double (nullable = true)
  |-- Occupancy: integer (nullable = true)
+
+
+
+- https://archive.ics.uci.edu/ml/datasets/Occupancy+Detection+

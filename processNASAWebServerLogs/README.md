@@ -16,6 +16,10 @@
 - sink 
 - output model 
 
+
+## batch weblogs 
+
+
 ## How to run 
 - Run Spark with Scala 
     - Spark API 
@@ -38,3 +42,4 @@
 
 ## Resource 
 
+- http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html
